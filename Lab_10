@@ -1,0 +1,28 @@
+package lab_10;
+
+public class Lab_10 {
+
+    public static void main(String[] args) {
+
+        Institute kpi = new Institute("KPI");
+
+        Faculty fict = new Faculty("FICT");
+        kpi.addFaculty(fict);
+        Faculty iasa = new Faculty("IASA");
+        kpi.addFaculty(iasa);
+
+        Student ivan = new Student("Ivan", "Ivanov", 1, 98);
+        fict.addStudent(ivan);
+        Student maksym = new Student("Maksym", "Bukasov", 2, 100);
+        fict.addStudent(maksym);
+        Student oleksii1 = new Student("Oleksii", "Tymoshenko", 3, 90);
+        iasa.addStudent(oleksii1);
+        Student oleksii2 = new Student("Oleksii", "Kurkin", 4, 95.5);
+        iasa.addStudent(oleksii2);
+
+        findAmountOfStudents(kpi);
+        findTheBiggestFaculty(kpi);
+        listOfExcellentStudents(kpi);
+
+    }
+}
