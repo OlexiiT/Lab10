@@ -1,0 +1,35 @@
+package lab_10;
+
+import java.util.ArrayList;
+
+public class Institute {
+
+    private String name;
+    public ArrayList<Faculty> faculties = new ArrayList<>();
+
+    public Institute(String name) {
+        this.name = name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void addFaculty(Faculty faculty) {
+        faculties.add(faculty);
+    }
+    
+    public void delFaculty(Faculty faculty) {
+        faculties.remove(faculty);
+    }
+
+    @Override
+    public String toString() {
+        return name + ", faculties=" + faculties;
+    }
+
+}
